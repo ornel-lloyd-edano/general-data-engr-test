@@ -27,6 +27,9 @@ version := "1.0"
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1",
-  "com.github.seratch" %% "awscala-s3" % "0.9.+",
-  "org.apache.spark" %% "spark-core" % "3.3.1"
+  "com.github.pureconfig" %% "pureconfig" % "0.17.2",
+  "org.apache.hadoop" % "hadoop-aws" % "3.3.2",
+  "com.github.seratch" %% "awscala-s3" % "0.9.2",
+  "org.apache.spark" %% "spark-core" % "3.3.2",
+  "org.scalatest" %% "scalatest" % "3.2.15" % Test
 )

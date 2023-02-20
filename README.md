@@ -1,5 +1,5 @@
 # general-data-engr-test
-Reads and writes a CSV/TSV from/to AWS S3 and do some key value processing
+An Intellij IDEA sbt project. Reads and writes a CSV/TSV from/to AWS S3 and do some key value processing as described below.
 
 ### A directory in S3 contains files with two columns
 
@@ -32,3 +32,8 @@ An S3 path (input) An S3 path (output) An AWS ~/.aws/credentials profile to init
 Then in spark local mode the app should write file(s) to the output S3 path in TSV format with two columns such that
 
 The first column contains each key exactly once The second column contains the integer occurring an odd number of times for the key, as described by #6 above
+
+## Directions
+#### 1. Go to application.conf. Uncomment aws.credentials if you want to explicitly specify AWS access key and secret. Otherwise, leave it commented out to use the default AWS credentials present in the local machine 
+#### 2. Go to Main.scala and in line 12 choose appConfig.aws if you want to read/write files in AWS S3 or appConfig.fileSystem if you want to read/write local files (also indicated in application.conf)
+#### 3. Run Main.scala
